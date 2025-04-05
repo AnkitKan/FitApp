@@ -1,0 +1,100 @@
+body{
+  font-family: 'Roboto', sans-serif;
+}
+.navigation_pane{
+    display: flex;
+    gap: 150px;
+    border-style:groove;
+}
+.first_nav {
+    display:block;
+    padding: 14px 20px;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+    position: relative; /* To position the dropdown menu */
+  }
+  .second_nav {
+    display:block;
+    padding: 14px 20px;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+    position: relative; /* To position the dropdown menu */
+  }
+  .third_nav {
+    display:block;
+    padding: 14px 20px;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+    position: relative; /* To position the dropdown menu */
+  }
+  
+  .first_nav:hover {
+    background-color: #575757; /* Hover effect for the parent div */
+  }
+  
+  /* Dropdown Menu (initially hidden) */
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 47px; /* Position below the parent div */
+    left: 0px;
+    background-color: #333;
+    width: 200px;
+    border-radius: 5px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index:1;
+  }
+  
+  /* Dropdown Items */
+  .dropdown-item {
+    display: block;
+    padding: 12px 20px;
+    color: white;
+    text-align: left;
+  }
+  
+  .dropdown-item:hover {
+    background-color: #575757;
+  }
+  
+  /* Show Dropdown on Hover */
+  .first_nav:hover .dropdown-menu {
+    display:block; /* Display the dropdown when hovering over Exercises */
+  }
+body {
+    background-color: royalblue;
+}
+img {
+    width: 100%; /* Image takes up 50% of the container width */
+    height: auto; /* Maintain aspect ratio */
+    z-index: 0;
+}
+
+/* For tablets and smaller screens (up to 768px) */
+@media (max-width: 768px) {
+    img {
+        width: 100%; /* Image takes up 80% of the container width */
+    }
+}
+
+/* For mobile screens (up to 480px) */
+@media (max-width: 480px) {
+    img {
+        width: 100%; /* Image takes up 100% of the container width */
+    }
+}
+
+.container{
+    position:relative;
+}
+.contained{
+    font-size: 160px;
+    position:absolute;
+    color:white;
+    bottom: -125px;
+    right: 9px;
+
+}
