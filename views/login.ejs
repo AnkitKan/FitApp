@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+    <head>
+        <link rel="stylesheet" href="indexstyles.css">
+    </head>
+    <body>
+        <div class="container">Login
+            <div class="centered-div">
+                <div>
+                    <form action="/login" method="POST">
+                        <input type="text" name="email" placeholder="Enter your username">
+                        <input type="text" name="password" placeholder="Enter your password"></input>
+                        <input type="submit" vale="Login"></input>
+                    </form>
+                </div>
+            </div>
+            <% if(locals.password == undefined || locals.password === '') { %>
+                <p>Enter your username and password to login</p>
+            <% } else if (password == 'S') { %> 
+                <p>Login successful</p>
+            <% } else if (password == 'F') { %>
+                <p>Username or password was incorrect, please try again</p>
+            <% } %>
+
+
+    </body>
+</html>

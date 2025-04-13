@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="indexstyles.css">
+</head>
+<body>
+    <div class="container">Register
+        <div class="centered-div">
+            <form action="/register" method="POST">
+                <input type="text" name="email" placeholder="Enter your email">
+                <input type="text" name="password" placeholder="Enter your password">
+                <input type="text" name="p_verification" placeholder="Re-enter your password">
+                <input type="submit" value="Create account">
+            </form>
+        </div>
+        <% if (locals.password == undefined || locals.password === '') { %> 
+            <p>Enter your desired username and password to create an account</p>
+        <% } else if (locals.password === locals.p_verification) { %>
+            <p>Your account was successfully created!</p>
+        <% } else if (locals.password === "error") { %>
+            <p>An account with this email already exists</p>
+        <% } else if (locals.password != locals.pp_verification) { %>
+            <p>The passwords did not match, please try again.</p>
+        <% } %>
+    
+    <div>
+</body>
+</html>
